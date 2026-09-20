@@ -177,52 +177,47 @@
     opacity: 0.85;
     margin-top: -3px;
 }
-/* =====================================================
-   PREMIUM DESIGN - UKM VOLI UNPAM
-   ===================================================== */
+/* =========================================================
+   PREMIUM UNPAM VOLLEYBALL
+   ========================================================= */
 
-/* WARNA UTAMA */
 :root {
-  --bg: #f5f6f8;
-  --white: #ffffff;
-  --text: #111318;
-  --muted: #667085;
-  --line: #e3e5e8;
-
-  --purple: #6d4aff;
-  --purple-dark: #5133d4;
+  --purple: #6846ff;
+  --purple-dark: #4f32d4;
   --lime: #c9ff38;
-
-  --dark: #0d0f14;
-  --dark-card: #151820;
+  --black: #0d0f14;
+  --text: #111318;
+  --muted: #69707d;
+  --light: #f5f6f8;
+  --white: #ffffff;
+  --line: #e5e7eb;
 }
 
 
-/* BODY */
+/* =========================
+   BODY
+   ========================= */
+
 body {
-  background: var(--bg);
+  background: var(--light);
   color: var(--text);
 }
 
 
-/* =====================================================
+/* =========================
    NAVBAR
-   ===================================================== */
+   ========================= */
 
 .navbar {
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255,255,255,.94) !important;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
-}
-
-nav {
-  gap: 28px;
+  border-bottom: 1px solid rgba(0,0,0,.07) !important;
+  box-shadow: 0 5px 25px rgba(0,0,0,.04);
 }
 
 nav a {
-  transition: color .25s ease, opacity .25s ease;
+  transition: all .25s ease;
 }
 
 nav a:hover {
@@ -231,38 +226,53 @@ nav a:hover {
 }
 
 .nav-cta {
-  background: var(--dark);
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 999px;
+  background: var(--black) !important;
+  color: white !important;
+  padding: 12px 22px !important;
+  border-radius: 999px !important;
   transition: all .3s ease;
 }
 
 .nav-cta:hover {
-  background: var(--purple);
-  color: #fff;
+  background: var(--purple) !important;
   transform: translateY(-2px);
 }
 
 
-/* =====================================================
+/* =========================
    HERO
-   ===================================================== */
+   ========================= */
 
 .hero {
-  min-height: 88vh;
   background:
-    radial-gradient(circle at 75% 40%, rgba(109, 74, 255, .25), transparent 35%),
-    linear-gradient(135deg, #090b10, #15121f 55%, #090b10);
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(104,70,255,.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #08090d 0%,
+      #14121e 55%,
+      #090a0e 100%
+    ) !important;
+
   position: relative;
 }
 
-.hero::before {
+.hero::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(120deg, transparent 0%, rgba(255,255,255,.025) 50%, transparent 100%);
+  width: 500px;
+  height: 500px;
+  right: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid rgba(201,255,56,.08);
+  box-shadow:
+    0 0 0 80px rgba(201,255,56,.015),
+    0 0 0 160px rgba(104,70,255,.015);
   pointer-events: none;
 }
 
@@ -271,69 +281,61 @@ nav a:hover {
   z-index: 2;
 }
 
-.hero .eyebrow {
-  color: var(--lime);
-  opacity: 1;
-  letter-spacing: 3px;
-}
-
 .hero h1 {
   font-weight: 900;
   letter-spacing: -5px;
 }
 
 .hero h1 span {
+  color: var(--lime) !important;
+}
+
+.hero .eyebrow {
   color: var(--lime);
+  opacity: 1;
 }
 
 .hero-text {
-  color: #b8bcc7;
-  line-height: 1.75;
+  color: #b7bbc5;
+  line-height: 1.8;
 }
 
 .primary {
-  background: var(--lime);
-  color: #111;
-  border-radius: 999px;
-  padding: 15px 25px;
+  background: var(--lime) !important;
+  color: #111 !important;
+  border-radius: 999px !important;
+  padding: 15px 25px !important;
   transition: all .3s ease;
 }
 
 .primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201, 255, 56, .2);
+  box-shadow: 0 12px 30px rgba(201,255,56,.2);
 }
 
 .ghost {
-  border: 1px solid #555b68;
-  border-radius: 999px;
+  border-radius: 999px !important;
+  border: 1px solid #555b67 !important;
   transition: all .3s ease;
 }
 
 .ghost:hover {
-  border-color: var(--purple);
-  background: rgba(109, 74, 255, .12);
+  border-color: var(--purple) !important;
+  background: rgba(104,70,255,.12);
 }
 
 
-/* BOLA */
-.volleyball {
-  filter:
-    drop-shadow(0 25px 30px rgba(0,0,0,.5))
-    drop-shadow(0 0 35px rgba(109,74,255,.18));
-}
-
-
-/* =====================================================
+/* =========================
    SECTION
-   ===================================================== */
+   ========================= */
 
 .section {
-  padding: 100px 8%;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-head {
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 }
 
 .section-head .eyebrow {
@@ -341,10 +343,9 @@ nav a:hover {
   opacity: 1;
 }
 
-.section-head h2,
-.map-section h2 {
-  color: var(--text);
-  font-weight: 850;
+.section-head h2 {
+  font-weight: 900;
+  letter-spacing: -3px;
 }
 
 .section-head h2 span {
@@ -352,27 +353,28 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   ABOUT / TENTANG
-   ===================================================== */
+/* =========================
+   TENTANG
+   ========================= */
 
 .about-grid {
   gap: 24px;
 }
 
 .card {
-  background: rgba(255,255,255,.95);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  min-height: 300px;
-  padding: 38px;
-  box-shadow: 0 12px 35px rgba(16,17,20,.05);
+  background: rgba(255,255,255,.96) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 24px;
+  padding: 40px;
+  min-height: 320px;
+  box-shadow: 0 12px 40px rgba(16,17,20,.055);
   transition: all .3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(16,17,20,.09);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(16,17,20,.10);
+  border-color: rgba(104,70,255,.25) !important;
 }
 
 .card .number {
@@ -380,19 +382,28 @@ nav a:hover {
 }
 
 .card h3 {
-  margin: 32px 0 16px;
+  font-size: 25px;
+  margin-top: 32px;
+}
+
+.card p {
+  color: #69707d;
+  line-height: 1.75;
 }
 
 
-/* =====================================================
+/* =========================
    ORGANISASI
-   ===================================================== */
+   ========================= */
 
 .dark {
   background:
-    radial-gradient(circle at 80% 20%, rgba(109,74,255,.15), transparent 30%),
-    #0d0f14;
-  color: #fff;
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(104,70,255,.18),
+      transparent 30%
+    ),
+    #0d0f14 !important;
 }
 
 .dark .section-head h2 {
@@ -403,41 +414,37 @@ nav a:hover {
   color: var(--lime);
 }
 
+.dark .section-head h2 span {
+  color: var(--lime);
+}
+
 .org-grid {
   gap: 16px;
 }
 
 .person {
-  background: rgba(255,255,255,.035);
-  border: 1px solid rgba(255,255,255,.09);
-  border-radius: 18px;
-  padding: 24px;
+  background: rgba(255,255,255,.035) !important;
+  border: 1px solid rgba(255,255,255,.09) !important;
+  border-radius: 20px;
+  padding: 26px;
   transition: all .3s ease;
 }
 
 .person:hover {
-  transform: translateY(-4px);
-  border-color: rgba(109,74,255,.7);
-  background: rgba(109,74,255,.08);
+  transform: translateY(-5px);
+  background: rgba(104,70,255,.09) !important;
+  border-color: rgba(104,70,255,.65) !important;
 }
 
 .avatar {
-  background: var(--lime);
-  box-shadow: 0 0 0 5px rgba(201,255,56,.08);
-}
-
-.featured {
-  outline: 2px solid var(--purple);
+  background: var(--lime) !important;
+  box-shadow: 0 0 0 6px rgba(201,255,56,.07);
 }
 
 
-/* =====================================================
+/* =========================
    PROGRAM LATIHAN
-   ===================================================== */
-
-.light {
-  background: #f5f6f8;
-}
+   ========================= */
 
 .schedule {
   border-top: 1px solid var(--line);
@@ -450,7 +457,7 @@ nav a:hover {
 }
 
 .session:hover {
-  background: #fff;
+  background: white;
   border-radius: 14px;
   padding-left: 28px;
   padding-right: 28px;
@@ -461,175 +468,168 @@ nav a:hover {
 }
 
 
-/* =====================================================
+/* =========================
    AGENDA
-   ===================================================== */
+   ========================= */
+
+.light {
+  background: #f0f1f4 !important;
+}
 
 .agenda-grid {
   gap: 16px;
 }
 
 .agenda-card {
-  background: #fff;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 25px;
-  min-height: 190px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.04);
   transition: all .3s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,.035);
 }
 
 .agenda-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(109,74,255,.35);
-  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  transform: translateY(-6px);
+  border-color: rgba(104,70,255,.35);
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
 }
 
 .agenda-card span {
   color: var(--purple);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 
-/* =====================================================
+/* =========================
    GALERI
-   ===================================================== */
+   ========================= */
 
 .gallery {
-  gap: 14px;
+  gap: 14px !important;
 }
 
 .photo {
-  border-radius: 18px;
-  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
 }
 
 .photo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,.65),
-    transparent 55%
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.70),
+      transparent 55%
+    );
   pointer-events: none;
 }
 
 .photo span {
-  z-index: 3;
+  z-index: 5;
   border-radius: 8px;
-  background: rgba(0,0,0,.65);
 }
 
 
-/* =====================================================
+/* =========================
    PENDAFTARAN
-   ===================================================== */
+   ========================= */
 
 .register {
   background:
-    radial-gradient(circle at 80% 50%, rgba(109,74,255,.25), transparent 35%),
-    #0d0f14;
-  border-radius: 28px;
-  margin: 30px 8%;
-  padding: 70px 8%;
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(104,70,255,.25),
+      transparent 35%
+    ),
+    #0d0f14 !important;
+
+  border-radius: 30px;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 75px 8%;
 }
 
 .register h2 {
-  color: #fff;
+  color: white;
 }
 
 .register h2 span {
   color: var(--lime);
 }
 
-.register p {
-  color: #aeb3bf;
-}
 
-
-/* =====================================================
+/* =========================
    QR CODE
-   ===================================================== */
+   ========================= */
 
 .qr-box {
-  border-color: var(--lime);
+  border-color: var(--lime) !important;
   box-shadow: 0 10px 35px rgba(201,255,56,.12);
 }
 
 .qr-label {
-  border-color: var(--lime);
+  border-color: var(--lime) !important;
 }
 
 .qr-label span {
-  color: var(--lime);
+  color: var(--lime) !important;
 }
 
 
-/* =====================================================
+/* =========================
    MAP
-   ===================================================== */
+   ========================= */
 
 .map-section {
-  background: #fff;
+  background: white;
 }
 
 .map-placeholder {
-  border-radius: 22px;
-  background:
-    linear-gradient(135deg,#e8e9ed,#d9dbe0);
+  border-radius: 24px;
   border: 1px solid var(--line);
+  background: linear-gradient(
+    135deg,
+    #eceef2,
+    #dfe2e7
+  );
 }
 
 
-/* =====================================================
+/* =========================
    FOOTER
-   ===================================================== */
+   ========================= */
 
 footer {
-  background: #08090c;
+  background: #08090c !important;
   border-top: 1px solid rgba(255,255,255,.06);
 }
 
 
-/* =====================================================
+/* =========================
    MOBILE
-   ===================================================== */
+   ========================= */
 
 @media (max-width: 800px) {
 
-  .navbar {
-    padding: 16px 7%;
-  }
-
-  nav {
-    background: rgba(255,255,255,.97);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid #ddd;
-  }
-
-  .hero {
-    min-height: auto;
-    padding-top: 80px;
-    padding-bottom: 70px;
-  }
-
-  .hero h1 {
-    letter-spacing: -3px;
-  }
-
   .section {
-    padding: 75px 7%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .section-head h2 {
+    letter-spacing: -2px;
   }
 
   .card {
-    border-radius: 18px;
+    border-radius: 20px;
+    padding: 30px;
   }
 
   .register {
-    margin: 20px 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 55px 7%;
-    border-radius: 22px;
+    border-radius: 24px;
   }
 }
