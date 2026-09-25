@@ -1,3 +1,15 @@
+
+  color: white;
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
 /* =========================================================
    UNPAM VOLLEYBALL
    PREMIUM MODERN DESIGN
@@ -123,18 +135,6 @@ nav a:hover {
   display: none;
   border: 0;
   background: none;
-  color: white;
-  font-size: 25px;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  position: relative;
-
   min-height: 650px;
 
   display: grid;
@@ -366,8 +366,17 @@ nav a:hover {
 .section-head h2 span,
 .map-section h2 span {
   color: var(--purple);
+  font-size: inherit;
 }
-
+.about-description {
+  max-width: 760px;
+  margin-top: 24px;
+  color: #718096;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0;
+}
 
 /* =========================================================
    TENTANG
