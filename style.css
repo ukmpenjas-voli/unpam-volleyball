@@ -1,15 +1,3 @@
-
-  color: white;
-  font-size: 25px;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  position: relative;
 /* =========================================================
    UNPAM VOLLEYBALL
    PREMIUM MODERN DESIGN
@@ -135,6 +123,19 @@ nav a:hover {
   display: none;
   border: 0;
   background: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
   min-height: 650px;
 
   display: grid;
@@ -366,17 +367,8 @@ nav a:hover {
 .section-head h2 span,
 .map-section h2 span {
   color: var(--purple);
-  font-size: inherit;
 }
-.about-description {
-  max-width: 760px;
-  margin-top: 24px;
-  color: #718096;
-  font-size: 17px;
-  line-height: 1.7;
-  font-weight: 400;
-  letter-spacing: 0;
-}
+
 
 /* =========================================================
    TENTANG
@@ -386,6 +378,19 @@ nav a:hover {
   background: #f7f7f5;
 }
 
+.about-description {
+  max-width: 760px;
+
+  margin-top: 24px;
+
+  color: #718096;
+
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
 .about-grid {
   display: grid;
 
@@ -393,7 +398,7 @@ nav a:hover {
 
   gap: 55px;
 
-  align-items: center;
+  align-items: stretch;
 }
 
 .card {
@@ -404,8 +409,6 @@ nav a:hover {
   border: 1px solid #e5e7eb;
 
   padding: 30px;
-
-  min-height: auto;
 
   box-shadow: 0 8px 25px rgba(15,23,42,.05);
 
@@ -428,7 +431,7 @@ nav a:hover {
 .card h3 {
   font-size: 21px;
 
-  margin: 25px 0 14px;
+  margin: 18px 0 14px;
 }
 
 .card p {
@@ -436,17 +439,59 @@ nav a:hover {
 
   font-size: 13px;
 
-  line-height: 1.65;
+  line-height: 1.7;
 
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.story-highlight {
+  color: var(--purple) !important;
+
+  font-size: 14px !important;
+
+  font-weight: 800;
 }
 
 .mission {
+  display: block;
+}
+
+.mission-title {
+  margin-bottom: 25px;
+}
+
+.mission-content {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .8fr 1.2fr;
 
-  gap: 20px;
+  gap: 30px;
+}
+
+.mission-content h4 {
+  font-size: 13px;
+
+  color: var(--purple);
+
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.mission-content ul {
+  padding-left: 18px;
+}
+
+.mission-content li {
+  color: #59657b;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  margin-bottom: 9px;
 }
 
 
@@ -551,10 +596,6 @@ nav a:hover {
   color: #aeb6c7;
 }
 
-.featured {
-  outline: none;
-}
-
 
 /* =========================================================
    PROGRAM LATIHAN
@@ -601,6 +642,14 @@ nav a:hover {
   font-size: 15px;
 
   color: #18233e;
+}
+
+.note {
+  margin-top: 18px;
+
+  color: #788196;
+
+  font-size: 10px;
 }
 
 
@@ -671,6 +720,18 @@ nav a:hover {
 
 #gallery {
   background: white;
+}
+
+.gallery-description {
+  max-width: 700px;
+
+  margin-top: 18px;
+
+  color: #718096;
+
+  font-size: 15px;
+
+  line-height: 1.7;
 }
 
 .gallery {
@@ -894,6 +955,14 @@ nav a:hover {
   background: white;
 }
 
+.map-section > div:first-child > p:last-child {
+  margin-top: 18px;
+
+  color: #718096;
+
+  font-size: 14px;
+}
+
 .map-placeholder {
   height: 280px;
 
@@ -915,6 +984,8 @@ nav a:hover {
   color: #26324a;
 
   border: 1px solid #dce0e8;
+
+  padding: 30px;
 }
 
 .map-placeholder b {
@@ -997,6 +1068,10 @@ footer p {
   }
 
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-content {
     grid-template-columns: 1fr;
   }
 
@@ -1087,8 +1162,8 @@ footer p {
     font-size: 42px;
   }
 
-  .mission {
-    grid-template-columns: 1fr;
+  .about-description {
+    font-size: 15px;
   }
 
   .org-grid {
@@ -1097,6 +1172,7 @@ footer p {
 
   .session {
     grid-template-columns: 1fr;
+
     gap: 7px;
   }
 
@@ -1168,12 +1244,19 @@ footer p {
       220px
       220px
       220px
-      220px
       220px;
   }
 
   .photo:first-child {
     grid-row: auto;
+  }
+
+  .stats {
+    gap: 15px;
+  }
+
+  .stats strong {
+    font-size: 21px;
   }
 
 }
