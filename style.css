@@ -623,43 +623,81 @@ nav a:hover {
 
 /* FOTO */
 
-.avatar {
-  position: relative;
+/* =========================================================
+   FOTO ORGANISASI - BULAT & RAPI
+   ========================================================= */
 
+.avatar {
   width: 64px;
   height: 64px;
-
   min-width: 64px;
+  min-height: 64px;
 
   border-radius: 50%;
-
   overflow: hidden;
 
   background: var(--lime);
-
   border: 2px solid rgba(201,255,25,.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
 
   box-shadow:
     0 0 0 4px rgba(201,255,25,.06),
     0 8px 20px rgba(0,0,0,.3);
 }
 
-
-/* GAMBAR */
-
 .avatar img {
   width: 100%;
   height: 100%;
 
+  max-width: none;
+  max-height: none;
+
   display: block;
 
   object-fit: cover;
-
   object-position: center;
 
+  border-radius: 50%;
+
+  transform: none;
   transition: transform .4s ease;
 }
 
+.person:hover .avatar img {
+  transform: scale(1.08);
+}
+
+/* FOTO KETUA LEBIH BESAR */
+.person.featured .avatar {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  min-height: 72px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 3px solid var(--lime);
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 0 0 5px rgba(201,255,25,.08),
+    0 10px 25px rgba(0,0,0,.35);
+}
+
+.person.featured .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
 
 /* ZOOM FOTO SAAT HOVER */
 
