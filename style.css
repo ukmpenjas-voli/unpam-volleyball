@@ -789,32 +789,30 @@ nav a:hover {
 
   .org-grid {
     grid-template-columns: 1fr;
-
     gap: 12px;
   }
 
   .person {
     min-height: 88px;
-
     padding: 14px 16px;
   }
 
   .avatar {
     width: 58px;
     height: 58px;
-
     min-width: 58px;
+    min-height: 58px;
+    border-radius: 50%;
   }
 
   .person.featured .avatar {
     width: 64px;
     height: 64px;
-
     min-width: 64px;
+    min-height: 64px;
+    border-radius: 50%;
   }
-
 }
-
 
 @media (max-width: 480px) {
 
